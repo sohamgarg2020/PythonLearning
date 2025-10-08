@@ -11,6 +11,12 @@ from sklearn.metrics import classification_report
 #nb import
 from sklearn.naive_bayes import GaussianNB
 
+#logreg import
+from sklearn.linear_model import LogisticRegression
+
+#svm import
+from sklearn.svm import SVC
+
 
 
 
@@ -55,3 +61,17 @@ nb_model = nb_model.fit(X_train, y_train)
 
 y_pred_nb = nb_model.predict(X_test)
 print(classification_report(y_test, y_pred_nb))
+
+#Logistic Regression
+lg_model = LogisticRegression()
+lg_model = lg_model.fit(X_train, y_train)
+
+y_pred_lg = lg_model.predict(X_test)
+print(classification_report(y_test, y_pred_lg))
+
+#SVM
+svm_model = SVC()
+svm_model = svm_model.fit(X_train, y_train)
+
+y_pred_svm = svm_model.predict(X_test)
+print(classification_report(y_test, y_pred_svm))
