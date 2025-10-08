@@ -49,7 +49,7 @@ knn_model.fit(X_train, y_train)
 y_pred_knn = knn_model.predict(X_test)
 print(classification_report(y_test, y_pred_knn)) 
 
-#Naive Base
+#Naive Bayes
 nb_model = GaussianNB()
 nb_model = nb_model.fit(X_train, y_train)
 
